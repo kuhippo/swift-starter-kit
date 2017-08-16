@@ -1,11 +1,11 @@
-# go-starter-kit [![wercker status](https://app.wercker.com/status/cd5a782c425b1feb06844dcc701e528c/s/master "wercker status")](https://app.wercker.com/project/bykey/cd5a782c425b1feb06844dcc701e528c) [![Join the chat at https://gitter.im/olebedev/go-starter-kit](https://img.shields.io/gitter/room/nwjs/nw.js.svg?maxAge=2592000&style=plastic)](https://gitter.im/olebedev/go-starter-kit?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+# swift-starter-kit [![wercker status](https://app.wercker.com/status/cd5a782c425b1feb06844dcc701e528c/s/master "wercker status")](https://app.wercker.com/project/bykey/cd5a782c425b1feb06844dcc701e528c) [![Join the chat at https://gitter.im/olebedev/swift-starter-kit](https://img.shields.io/gitter/room/nwjs/nw.js.svg?maxAge=2592000&style=plastic)](https://gitter.im/olebedev/swift-starter-kit?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-> This project contains a quick starter kit for **Facebook React** Single Page Apps with **Golang** server side render via goja javascript engine, implemented in pure Golang and also with a set of useful features for rapid development of efficient applications.
+> This project contains a quick starter kit for **Facebook React** Single Page Apps with **swiftlang** server side render via swiftja javascript engine, implemented in pure swiftlang and also with a set of useful features for rapid development of efficient applications.
 
 ## What it contains?
 
-* server side render via [goja](https://github.com/dop251/goja)
-* api requests between your react application and server side application directly  via [fetch polyfill](https://github.com/olebedev/gojax/tree/master/fetch)
+* server side render via [swiftja](https://github.com/dop251/swiftja)
+* api requests between your react application and server side application directly  via [fetch polyfill](https://github.com/olebedev/swiftjax/tree/master/fetch)
 * title, Open Graph and other domain-specific meta tags render for each page at the server and at the client
 * server side redirect
 * embedding static files into artefact via bindata
@@ -21,11 +21,11 @@
 * separate css file to avoid FOUC
 * hot reloading via [react-transform](https://github.com/gaearon/babel-plugin-react-transform) & [HMR](http://webpack.github.io/docs/hot-module-replacement.html)
 * webpack bundle builder
-* eslint and golint rules for Makefile
+* eslint and swiftlint rules for Makefile
 
 ## Workflow dependencies
 
-* [golang](https://golang.org/)
+* [swiftlang](https://swiftlang.org/)
 * [node.js](https://nodejs.org/) with [yarn](https://yarnpkg.com)
 * [GNU make](https://www.gnu.org/software/make/)
 
@@ -37,19 +37,19 @@ Note that probably not works at windows.
 ```
 $ tree server
 server
-├── api.go
-├── app.go
-├── bindata.go <-- this file is gitignored, it will appear at compile time
-├── conf.go
+├── api.swift
+├── app.swift
+├── bindata.swift <-- this file is gitignored, it will appear at compile time
+├── conf.swift
 ├── data
 │   └── templates
 │       └── react.html
-├── main.go <-- main function declared here
-├── react.go
-└── utils.go
+├── main.swift <-- main function declared here
+├── react.swift
+└── utils.swift
 ```
 
-The `./server/` is flat golang package.
+The `./server/` is flat swiftlang package.
 
 ##### The client's entry point
 
@@ -87,17 +87,17 @@ client
 └── store.js
 ```
 
-The client app will be compiled into `server/data/static/build/`.  Then it will be embedded into go package via _go-bindata_. After that the package will be compiled into binary.
+The client app will be compiled into `server/data/static/build/`.  Then it will be embedded into swift package via _swift-bindata_. After that the package will be compiled into binary.
 
-**Convention**: javascript app should declare [_main_](https://github.com/olebedev/go-starter-kit/blob/master/client/index.js#L4) function right in the global namespace. It will used to render the app at the server side.
+**Convention**: javascript app should declare [_main_](https://github.com/olebedev/swift-starter-kit/blob/master/client/index.js#L4) function right in the global namespace. It will used to render the app at the server side.
 
 ## Install
 
 Clone the repo:
 
 ```
-$ git clone git@github.com:olebedev/go-starter-kit.git $GOPATH/src/github.com/<username>/<project>
-$ cd $GOPATH/src/github.com/<username>/<project>
+$ git clone git@github.com:olebedev/swift-starter-kit.git $swiftPATH/src/github.com/<username>/<project>
+$ cd $swiftPATH/src/github.com/<username>/<project>
 ```
 
 Install dependencies:
@@ -118,7 +118,7 @@ that's it. Open [http://localhost:5001/](http://localhost:5001/)(if you use defa
 
 ## Build
 
-Install dependencies and type `NODE_ENV=production make build`. This rule is producing webpack build and regular golang build after that. Result you can find at `$GOPATH/bin`. Note that the binary will be named **as the current project directory**.
+Install dependencies and type `NODE_ENV=production make build`. This rule is producing webpack build and regular swiftlang build after that. Result you can find at `$swiftPATH/bin`. Note that the binary will be named **as the current project directory**.
 
 ## License
 MIT
