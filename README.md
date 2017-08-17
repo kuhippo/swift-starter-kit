@@ -9,7 +9,7 @@
 * title, Open Graph and other domain-specific meta tags render for each page at the server and at the client
 * server side redirect
 * embedding static files into artefact via bindata
-* high performance [echo](https://github.com/labstack/echo) framework
+* high performance [perfect](https://github.com/PerfectlySoft/Perfect) framework
 * advanced cli via [cli](https://github.com/codegangsta/cli)
 * Makefile based project
 * one(!) terminal window process for development
@@ -122,3 +122,5 @@ Install dependencies and type `NODE_ENV=production make build`. This rule is pro
 
 ## License
 MIT
+
+
