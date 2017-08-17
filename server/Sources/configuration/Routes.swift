@@ -30,7 +30,11 @@ func mainRoutes() -> [[String: Any]] {
 	               "documentRoot":"./webroot",
 	               "allowRequestFilter":false,
 	               "allowResponseFilters":true])
-	
-
+    
+    //api -restful
+    routes.append(["method":"post", "uri":"/user/new", "handler":User.new])
+    routes.append(["method":"delete", "uri":"/user/{username}/delete", "handler":User.delete])
+    routes.append(["method":"push", "uri":"/user/{username}/update", "handler":User.update])
+    routes.append(["method":"get", "uri":"/user/{username}", "handler":User.query])
 	return routes
 }

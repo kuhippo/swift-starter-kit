@@ -21,9 +21,10 @@ import PerfectLib
 import PerfectHTTP
 import PerfectHTTPServer
 
+//1.setp-----database配置
+config()
 
-
-
+//2.setp-----http 配置
 var confData: [String:[[String:Any]]] = [
     "servers": [
         [
@@ -38,6 +39,8 @@ var confData: [String:[[String:Any]]] = [
 confData["servers"]?[0]["filters"] = filters()
 
 confData["servers"]?[0]["routes"] = mainRoutes()
+
+//3.setp-----run
 do {
 	// Launch the servers based on the configuration data.
 	try HTTPServer.launch(configurationData: confData)
