@@ -55,7 +55,6 @@ $(BINDATA):
 lint:
 	@yarn run eslint || true
 	@golint $(GO_FILES) || true
-
 install:
 	@yarn install
 
